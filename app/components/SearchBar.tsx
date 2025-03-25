@@ -3,9 +3,9 @@
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 
-interface SearchBarProps {
+type SearchBarProps = {
   onSearch: (query: string) => void;
-}
+};
 
 export const SearchBar = ({ onSearch }: SearchBarProps) => {
   return (
@@ -13,7 +13,7 @@ export const SearchBar = ({ onSearch }: SearchBarProps) => {
       <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
       <Input
         type="text"
-        placeholder="Search todos..."
+        placeholder="Search todos"
         className="pl-8"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onSearch(e.target.value)
